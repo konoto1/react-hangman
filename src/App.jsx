@@ -8,10 +8,16 @@ function App() {
   return (
     <>
     <div className='main'>
-      <img src={hangman} alt="" />
-      <p>{words[calc].text}</p>
-      <Alphabet/>
-    </div>
+      <h1>Hangman</h1>
+      <p>Guess the word!</p>
+      <div className='game'>
+        <img src={hangman} alt="" />
+        <p className='word'>{words[calc].text}</p>
+        <div className='keyboard'>
+          <Alphabet/>
+        </div>
+        </div>
+      </div>
     </>
 
   )
