@@ -12,12 +12,19 @@ body {
 }
 
 .main {
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 img {
-  height: 100vh;
+  height: 600px;
+}
 
+.main p {
+  font-size: 5rem;
+  border-bottom: 5px dashed black;
+  letter-spacing: 2rem;
 }
