@@ -1,9 +1,13 @@
-
+import  hangman  from '../public/hangman.webp';
 
 function App() {
   
   return (
-    <h1>Hangman</h1>
+    <>
+    <div className='main'>
+    <img src={hangman} alt="" />
+    </div>
+    </>
 
   )
 }
