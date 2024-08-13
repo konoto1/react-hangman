@@ -1,17 +1,17 @@
 export const words = [
     {
-        text: 'Holiday',
+        text: 'HOLIDAY',
     },
     {
-        text: 'Vehicle',
+        text: 'VEHICLE',
     },
     {
-        text: 'pomidoras',
+        text: 'TOMATO',
     },
     {
-        text: 'blabla',
+        text: 'DOG',
     },
     {
-        text: 'agurkas',
+        text: 'CUCUMBER',
     },
 ];
