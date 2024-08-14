@@ -1,35 +1,28 @@
-import { useState } from "react";
+import {useState } from "react";
 
 export function Alphabet(params) {  
     const {word, actWord} = params;
-    const [guess, setGuess] = useState(word)
-    let keyboard = "QWERTYUIOPASDFGHJKLZXCVBNM";
-    keyboard = keyboard.split('');
-    const btn = keyboard.map(symbol => <button onClick={e => checkLetter(e)} key={symbol}>{symbol}</button>);
+    const [guess, setGuess] = useState(word);
+    const keyboard = "QWERTYUIOPASDFGHJKLZXCVBNM".split('');
+    const btn = keyboard.map(symbol => <button style={{}} disabled={false} onClick={e => checkLetter(e)} key={symbol}>{symbol}</button>);
     
 
     function checkLetter (e) {
         e => e.preventDefault();
-        console.log(actWord);
-        console.log(e.target.textContent);
-        const guessWord = [...guess.split('')];
+            e.target.disabled = true;
+            
         if (actWord.includes(e.target.textContent)) {
-            
-            function test () {
-                const result = guessWord
-                .map((letter, index) => actWord[index] === e.target.textContent ? 
-                index = e.target.textContent : 
-                index = '_' ).join('');
-               return result;
-            }
-            setGuess(test());
-             
-            
-            console.log(guess);
-            
-        }
-        
-        
+                setGuess(prev => prev
+                .split('')
+                .map((letter, index) => actWord[index] === e.target.textContent 
+                ? letter = e.target.textContent : letter !== '_'
+                ? letter = letter 
+                : letter = '_' ).join('')
+            );  
+                e.target.style.backgroundColor = 'lightGreen';
+        }  else {
+                e.target.style.backgroundColor = '#f27878';
+        }  
     }
 
     return   (
