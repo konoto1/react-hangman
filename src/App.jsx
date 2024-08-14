@@ -18,10 +18,7 @@ function App() {
       <p>Guess the word!</p>
       <div className='game'>
         <img src={hangman} alt="" />
-        <p className='word'>{word}</p>
-        <div className='keyboard'>
           <Alphabet word={word} actWord={actWord}/>
-        </div>
         </div>
       </div>
     </>

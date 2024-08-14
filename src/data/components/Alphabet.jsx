@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export function Alphabet(props) {
-    const {word, actWord} = props;
-    const [quess, setGuess] = useState(word)
+export function Alphabet(params) {  
+    const {word, actWord} = params;
+    const [guess, setGuess] = useState(word)
     let keyboard = "QWERTYUIOPASDFGHJKLZXCVBNM";
     keyboard = keyboard.split('');
     const btn = keyboard.map(symbol => <button onClick={e => checkLetter(e)} key={symbol}>{symbol}</button>);
@@ -12,19 +12,20 @@ export function Alphabet(props) {
         e => e.preventDefault();
         console.log(actWord);
         console.log(e.target.textContent);
-        
+        const guessWord = [...guess.split('')];
         if (actWord.includes(e.target.textContent)) {
+            
             function test () {
-               return (quess
-                .split('')
+                const result = guessWord
                 .map((letter, index) => actWord[index] === e.target.textContent ? 
                 index = e.target.textContent : 
-                index = '_' )).join('');
+                index = '_' ).join('');
+               return result;
             }
             setGuess(test());
              
             
-            console.log(test());
+            console.log(guess);
             
         }
         
@@ -32,6 +33,12 @@ export function Alphabet(props) {
     }
 
     return   (
-        btn 
+        <>
+        <p className='word'>{guess}</p>
+        <div className='keyboard'>
+            {btn}
+        </div>
+        </>
+        
     );    
 }
