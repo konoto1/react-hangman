@@ -1,16 +1,17 @@
 import {useEffect, useState } from "react";
 import  hangman  from '../../../public/hangman.webp';
 
+
 export function Alphabet(params) {  
     const {word, actWord} = params;
     const [won, setWon] = useState('')
-    const [win, setWin] = useState(0);
-    const [lose, setLose] = useState(0);
+    const [win, setWin] = useState(readScoreWin);
+    const [lose, setLose] = useState(readScoreLose);
     const [lifes, setLifes] = useState(6);
     const [guess, setGuess] = useState(word);
     const [disable, setDisable] = useState(false);
     const keyboard = "QWERTYUIOPASDFGHJKLZXCVBNM".split('');
-    const btn = keyboard.map(symbol => <button style={{}} disabled={disable} onClick={e => checkLetter(e)} key={symbol}>{symbol}</button>);
+    const btn = keyboard.map(symbol => <button  disabled={disable} onClick={e => checkLetter(e)} key={symbol}>{symbol}</button>);
     
 
     function checkLetter (e) {
@@ -41,7 +42,7 @@ export function Alphabet(params) {
             setWon  (
                 <div className="won">
                     <p>YOU WON!</p>
-                    <button>Play again</button>
+                    <button className="playAgain" onClick={() => playAgain()}>Play again</button>
                 </div>
             );
         };
@@ -56,11 +57,45 @@ export function Alphabet(params) {
             setWon  (
                 <div className="lose">
                     <p>YOU LOSE!</p>
-                    <button>Play again</button>
+                    <button className="playAgain" onClick={() => playAgain()}>Play again</button>
                 </div>
             );
         };
     };
+
+    function saveScore () {
+        const score = {win: win, lose: lose};
+        localStorage.setItem('score', JSON.stringify(score));    
+    }
+
+    function readScoreWin () {
+        const localData = JSON.parse(localStorage.getItem('score'));
+        if (localData) {
+            return localData.win;
+        }  else {
+            return 0;
+        }   
+    }
+
+    function readScoreLose () {
+        const localData = JSON.parse(localStorage.getItem('score'));
+        if (localData) {
+            return localData.lose;
+        }  else {
+            return 0;
+        }   
+    }
+
+    useEffect (() => saveScore(),[lose, win])
+
+    function playAgain () {
+        window.location.reload();    
+    }
+
+    function resetScore () {
+        setWin(0);
+        setLose(0);
+    }
 
     return   (
         <>
@@ -69,6 +104,7 @@ export function Alphabet(params) {
           <div>
             <p>WIN: {win}</p>
             <p>LOSE: {lose}</p>
+            <button className="resetScore" onClick={resetScore}>Reset score</button>
           </div>
           {won}
           <img src={hangman} alt="" />

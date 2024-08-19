@@ -1,12 +1,11 @@
 
-
 import { Alphabet } from './data/components/Alphabet.jsx';
 import { words } from './data/words.js';
 
 
 function App() {
 
-  const calc = Math.floor(Math.random() * words.length);
+  let calc = Math.floor(Math.random() * words.length);
   const actWord = words[calc].text;
   const word = '_'.repeat(words[calc].text.length);
 

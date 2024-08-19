@@ -51,12 +51,16 @@ img {
 .hanger img {
   background-color: transparent;
 }
+.resetScore {
+  padding: 5px 10px;
+  margin-top: 10px;
+}
 
 .won {
   position: fixed;
   padding: 50px 80px;
   top: 200px;
-  left: 500px;
+  left: 600px;
   background-color: green;
   border-radius: 10px;
 }
@@ -65,7 +69,7 @@ img {
   position: fixed;
   padding: 50px 80px;
   top: 200px;
-  left: 500px;
+  left: 600px;
   background-color: red;
   border-radius: 10px;
 }
@@ -85,4 +89,9 @@ img {
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+}
+
+.playAgain {
+  padding: 5px 10px;
+  margin-top: 10px;
 }
