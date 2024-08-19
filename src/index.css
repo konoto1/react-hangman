@@ -48,6 +48,28 @@ img {
   display: flex;
 }
 
+.hanger img {
+  background-color: transparent;
+}
+
+.won {
+  position: fixed;
+  padding: 50px 80px;
+  top: 200px;
+  left: 500px;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.lose {
+  position: fixed;
+  padding: 50px 80px;
+  top: 200px;
+  left: 500px;
+  background-color: red;
+  border-radius: 10px;
+}
+
 .keyboard {
   width: 40%;
   display: flex;
