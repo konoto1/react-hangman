@@ -1,5 +1,6 @@
 import {useEffect, useState } from "react";
 import  hangman  from '../../../public/hangman.webp';
+import { pictures } from "../pictures";
 
 
 export function Alphabet(params) {  
@@ -106,8 +107,13 @@ export function Alphabet(params) {
             <p>LOSE: {lose}</p>
             <button className="resetScore" onClick={resetScore}>Reset score</button>
           </div>
+          <div className="image">
+          <img src={hangman} alt="hanger Logo" />
+          <div className="hangman">
+          <img src={pictures[lifes]} alt="" />
+          </div>
           {won}
-          <img src={hangman} alt="" />
+          </div>
         </div>
         <p className='word'>{guess}</p>
         <div className='keyboard'>

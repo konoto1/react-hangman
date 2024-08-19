@@ -48,30 +48,47 @@ img {
   display: flex;
 }
 
+.image {
+  position: relative;
+}
+
+.hangman {
+  position: absolute;
+  top: 45px;
+  left: 255px;
+}
+
+.hangman img {
+  height: 200px;
+}
+
 .hanger img {
   background-color: transparent;
 }
 .resetScore {
   padding: 5px 10px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .won {
-  position: fixed;
+  position: absolute;
   padding: 50px 80px;
-  top: 200px;
-  left: 600px;
+  top: 70px;
+  left: -20px;
   background-color: green;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .lose {
-  position: fixed;
+  position: absolute;
   padding: 50px 80px;
-  top: 200px;
-  left: 600px;
+  top: 70px;
+  left: -20px;
   background-color: red;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .keyboard {
