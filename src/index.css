@@ -44,6 +44,10 @@ img {
   justify-content: center;
 }
 
+.hanger {
+  display: flex;
+}
+
 .keyboard {
   width: 40%;
   display: flex;
@@ -54,7 +58,8 @@ img {
 }
 
 .keyboard > button {
-  padding: 1rem;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;

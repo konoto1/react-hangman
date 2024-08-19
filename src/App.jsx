@@ -1,5 +1,5 @@
 
-import  hangman  from '../public/hangman.webp';
+
 import { Alphabet } from './data/components/Alphabet.jsx';
 import { words } from './data/words.js';
 
@@ -13,11 +13,10 @@ function App() {
 
   return (
     <>
-    <div className='main'>
-      <h1>Hangman</h1>
-      <p>Guess the word!</p>
-      <div className='game'>
-        <img src={hangman} alt="" />
+      <div className='main'>
+        <h1>Hangman</h1>
+        <p>Guess the word!</p>
+        <div className='game'>
           <Alphabet word={word} actWord={actWord}/>
         </div>
       </div>
