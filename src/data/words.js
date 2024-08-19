@@ -12,6 +12,33 @@ export const words = [
         text: 'DOG',
     },
     {
-        text: 'CUCUMBER',
+        text: 'CAT',
+    },
+    {
+        text: 'HOUSE',
+    },
+    {
+        text: 'LAKE',
+    },
+    {
+        text: 'BICYCLE',
+    },
+    {
+        text: 'APPLE',
+    },
+    {
+        text: 'BANANA',
+    },
+    {
+        text: 'GRASS',
+    },
+    {
+        text: 'TREE',
+    },
+    {
+        text: 'SEA',
+    },
+    {
+        text: 'BEACH',
     },
 ];
