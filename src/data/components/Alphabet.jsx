@@ -37,7 +37,7 @@ export function Alphabet(params) {
     useEffect(checkWin, [guess]);
     function checkWin () {
         if (!guess.includes('_')) {
-            document.getElementById('root').style.backgroundColor = 'grey';
+            document.querySelector('.main').style.backgroundColor = '#8080808d';
             btn.map(() => setDisable(true));
             setWin(prev => prev + 1);
             setWon  (
@@ -52,7 +52,7 @@ export function Alphabet(params) {
     useEffect(checkLose, [lifes]);
     function checkLose () {
         if (lifes === 0) {
-            document.getElementById('root').style.backgroundColor = 'grey';
+            document.querySelector('.main').style.backgroundColor = '#8080808d';
             btn.map(() => setDisable(true));
             setLose (prev => prev + 1);
             setWon  (

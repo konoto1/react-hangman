@@ -1,4 +1,4 @@
-
+import backround from '../public/backround.webp'
 import { Alphabet } from './data/components/Alphabet.jsx';
 import { words } from './data/words.js';
 
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div className='main'>
+      <div className='main' style={{backgroundImage: `url(${backround})`}}>
         <h1>Hangman</h1>
         <p>Guess the word!</p>
         <div className='game'>
