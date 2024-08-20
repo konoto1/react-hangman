@@ -172,4 +172,38 @@ img {
   .hangman img {
     height: 100px;
   }
+    .keyboard>button {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+    }
 }
+
+@media (max-width: 500px) {
+  .main > h1 {
+    font-size: 24px;
+  }
+  .main > p {
+    font-size: 18px;
+  }
+  .game > p {
+    font-size: 18px;
+  }
+  .hanger {
+    width: 250px;
+  }
+  .main .word {
+    font-size: 24px;
+  }
+  .score {
+    width: 50px
+  }
+  .score > p {
+    font-size: 12px;
+  }
+  .score > button {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}
+
