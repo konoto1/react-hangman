@@ -16,7 +16,7 @@ h1 {
 
 .main {
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,4 +112,64 @@ img {
 .playAgain {
   padding: 5px 10px;
   margin-top: 10px;
+}
+
+@media (max-width: 1268px){
+  .keyboard {
+    width: 45%;
+  }
+}
+
+@media (max-height: 740px) {
+  .keyboard {
+    gap: 0.5rem;
+  }
+  .keyboard>button {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-height: 700px) {
+  .image img {
+    height: 180px;
+  }
+  .hangman {
+    top: 25px;
+    left: 150px;
+  }
+  .hangman img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 1140px){
+  .keyboard {
+    width: 55%;
+  }
+}
+
+@media (max-width: 930px) {
+  .keyboard {
+    gap: 0.5rem;
+  }
+  .keyboard>button {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 780px) {
+  .image img {
+    height: 180px;
+  }
+  .hangman {
+    top: 25px;
+    left: 150px;
+  }
+  .hangman img {
+    height: 100px;
+  }
 }

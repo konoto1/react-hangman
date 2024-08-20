@@ -102,7 +102,7 @@ export function Alphabet(params) {
         <>
         <p>Lifes left: {lifes}</p>
         <div className='hanger'>
-          <div>
+          <div className='score'>
             <p>WIN: {win}</p>
             <p>LOSE: {lose}</p>
             <button className="resetScore" onClick={resetScore}>Reset score</button>
