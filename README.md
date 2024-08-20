@@ -45,9 +45,10 @@ Would like to run this project locally? Open terminal and follow these steps:
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/konoto1/html-tic-tac-toe.git
+    git clone https://github.com/konoto1/react-hangman.git
     ```
-2. Install NPM packages
+2. Open the cloned folder name "react-hangman"
+3. Install NPM packages
     ```sh
     npm i
     ```
@@ -55,10 +56,11 @@ Would like to run this project locally? Open terminal and follow these steps:
     ```sh
     npm install
     ```
-3. Run the server
+4. Run the server
     ```sh
     npm run dev
     ```
+5. Follow the link
 
 ### 🧪 Running tests
 
